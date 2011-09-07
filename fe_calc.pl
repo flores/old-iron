@@ -101,35 +101,35 @@ if ($q->cgi->var('REQUEST_METHOD') eq 'GET') {
 			$con=0.1;
 			$tsp_con=4290;
 		}
-		if ($compound=~/Rexolin/)
+		elsif ($compound=~/Rexolin/)
 		{
 			$con=0.06;
 			$con_mn=0.024;
 			$con_cu=0.0025;
 		}
-		if ($compound=~/EDTA \(12/)
+		elsif ($compound=~/EDTA \(12/)
 		{
 			$con=0.125;
 			$tsp_con=5100;
 		}
-		if ($compound=~/Gluconate/)
+		elsif ($compound=~/Gluconate/)
 		{
 			$con=0.1246;
 			$tsp_con=2440;
 		}
-		if ($compound=~/Super/)
+		elsif ($compound=~/Super/)
 		{
 			$con=0.06;
 			$tsp_con=2420;
 		}
-		if ($compound=~/Plantex/)
+		elsif ($compound=~/Plantex/)
 		{
 			$con=0.0653;
 			$con_mn=0.0187;
 			$con_cu=0.009;
 			$tsp_con=4300;
 		}
-		if ($compound=~/Micro/)
+		elsif ($compound=~/Micro/)
 		{
 			$con=0.04;
 			$con_mn=0.04;
@@ -152,7 +152,7 @@ if ($q->cgi->var('REQUEST_METHOD') eq 'GET') {
 #			$target_calc=~/(.*\.\d\d).+$/;
 #			$target_calc=$1;
 		}
-		if ($target)
+		elsif ($target)
 		{
 			$target_calc=$target;
 			$dose_calc=($target*$vol/$con);
